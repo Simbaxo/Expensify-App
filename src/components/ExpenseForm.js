@@ -7,13 +7,17 @@ const now = moment()
 console.log(now.format('MMM Do, YYYY'))
 
 export default class ExpenseForm extends React.Component {
-  state = {
-    description: '',
-    note: '',
-    amount: '',
-    createdAt: moment(),
-    calendarFocused: false,
-    error: ''
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      description: props.expense ? props.expense.description : '',
+      note: props.expense ? props.expense.note : '',
+      amount: props.expense ? (props.expense.amount / 100).toString() : '',
+      createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
+      calendarFocused: false,
+      error: ''
+    }
   }
 
   onDescriptionChange = (e) => {
@@ -49,7 +53,7 @@ export default class ExpenseForm extends React.Component {
 
     if (!this.state.description || !this.state.amount) {
       // Set error state equal to 'Please provide description and amount.'
-      this.setState(() => ({ error: 'Please provide description and amount!'}))
+      this.setState(() => ({ error: 'Please provide description and amount!' }))
     } else {
       // Clear the error
       this.setState(() => ({ error: '' }))
