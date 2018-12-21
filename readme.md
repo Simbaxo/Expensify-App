@@ -1,7 +1,7 @@
-# Git Commands
+# Expensify App
+------
+An Expense Manager. This app is built with React with Redux architecture.
 
-git init - Create a new git repo
-git status - View the changes to your project
-git add - Add files to staging area
-git commit - Creates a new commit with files from staging area
-git log - View recent commits
+# Getting Started
+------
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
