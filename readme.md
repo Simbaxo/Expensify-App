@@ -1,6 +1,9 @@
 # Expensify App
 ------
 An Expense Manager. This app is built with React with Redux architecture.
+[Demo Link](https://react-expensify-webapp-xo.herokuapp.com/ "Expensify App")
+
+![Background Image](https://github.com/Simbaxo/Expensify-App/blob/master/public/images/bg.jpg "Background Image")
 
 # Getting Started
 ------
